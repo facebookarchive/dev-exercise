@@ -7,7 +7,7 @@ describe('Element', function () {
   let document;
 
   beforeEach(function (done) {
-    jsdom.env('<div id="dontfindme"></div><div id="hello">You found me</div>', function (err, window) {
+    jsdom.env('<div id="dontfindme"></div><div class="hello">You found me</div>', function (err, window) {
       document = window.document;
       done();
     });
@@ -15,13 +15,13 @@ describe('Element', function () {
 
   it('should return correct element when element with id is present', function () {
     expect(
-      getElement(document, 'hello').textContent
+      getElement(document, '.hello').textContent
     ).to.equal('You found me');
   });
 
   it('should return null when element with id is present', function () {
     expect(
-      getElement(document, 'notfound')
+      getElement(document, '.notfound')
     ).to.equal(null);
   });
 })

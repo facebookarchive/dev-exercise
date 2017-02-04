@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 
-const createObject = require('./../src/prototype');
+const createObject = require('./../src/createObject');
 
 
 describe('createObject', function () {
