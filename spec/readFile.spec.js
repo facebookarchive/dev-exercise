@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 
 const readFile = require('./../src/readFile');
 
-describe.only('readFile', function () {
+describe('readFile', function () {
   describe('When file resolves', function () {
     it('should resolve with correct contents', function () {
       return readFile(__dirname + '/../src/file.json')
