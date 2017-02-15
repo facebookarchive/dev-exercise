@@ -1,3 +1,3 @@
-module.exports = function queryDOM () {
-
+module.exports = function queryDOM (doc, selector) {
+    return doc.querySelector(selector);
 }
